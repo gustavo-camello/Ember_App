@@ -1,6 +1,13 @@
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-      <h1>See more details about the player</h1>
+  <div class="container text-center">
+      <h1>{{@player.name}}</h1>
+      <ShareButton
+        @text="More info about {{@player.name}}"
+        @hashtags="player, soccer, football, coach, europe"
+        @via="emberjs"
+      >
+        Share on Twitter
+      </ShareButton>
   </div>
 </div>
 
