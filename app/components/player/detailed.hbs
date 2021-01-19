@@ -1,0 +1,29 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+      <h1>See more details about the player</h1>
+  </div>
+</div>
+
+<div class="card mb-3 player-details">
+  <div class="row g-0">
+      <Player::Image
+        src={{@player.image}}
+        alt="image of a player"
+      />
+    <div class="col-md-8 player">
+      <div class="card-body">
+        <h5 class="card-title">
+            <LinkTo @route="player" @model={{@player}}>
+                {{@player.name}}
+            </LinkTo>
+        </h5>
+        <ul class="list-details">
+            <li class="nationality p-1">Nationality: <span class="font-weight-bold" >{{@player.nationality}}</span></li>
+            <li class="club p-1">Club: <span class="font-weight-bold">{{@player.club}}</span></li>
+            <li class="age p-1">Age: <span class="font-weight-bold">{{@player.age}}</span></li>
+            <li class="position p-1">Position: <span class="font-weight-bold">{{@player.position}}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
