@@ -11,9 +11,35 @@ module('Acceptance | football players', function(hooks) {
     assert.equal(currentURL(), '/');
     assert.dom('h1').hasText('Welcome to Football Players');
 
-    assert.dom('.jumbotron a.btn').hasText('About Us');
-    await click('jumbotron a.btn');
+    assert.dom('.jumbotron .btn').hasText('About Us');
+    await click('.jumbotron .btn');
 
     assert.equal(currentURL(), '/about')
   })
+
+  test('visiting /about', async (assert)=> {
+    await visit('/about');
+
+    assert.equal(currentURL(), '/about');
+    assert.dom('h1').hasText('About Football Players');
+
+    assert.dom('.jumbotron .btn').hasText('Contact Page');
+    await click('.jumbotron .btn');
+
+    assert.equal(currentURL(), '/getting-in-touch')
+  })
+
+  test('visiting /getting-in-touch', async (assert)=> {
+    await visit('/getting-in-touch');
+
+    assert.equal(currentURL(), '/getting-in-touch');
+    assert.dom('h1').hasText('Contact Us');
+
+    assert.dom('.jumbotron .btn').hasText('Home');
+    await click('.jumbotron .btn');
+
+    assert.equal(currentURL(), '/')
+  })
+
+  
 });
