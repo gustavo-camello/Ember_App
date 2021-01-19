@@ -1,7 +1,7 @@
 {
     "data": {
         "type": "players",
-        "id": 3,
+        "id": "zidane",
         "attributes": {
             "name": "Zidane",
             "nationality": "Frence",

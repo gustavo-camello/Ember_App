@@ -2,7 +2,7 @@
     "data": [
         {
             "type": "player",
-            "id": 2,
+            "id": "ronaldinho-gaucho",
             "attributes": {
                 "name": "Ronaldinho Gaucho",
                 "nationality": "Brazilian",
@@ -16,7 +16,7 @@
         },
         {
             "type": "manager",
-            "id": 3,
+            "id": "zidane",
             "attributes": {
                 "name": "Zidane",
                 "nationality": "Frence",
@@ -30,7 +30,7 @@
         },
         {
             "type": "player",
-            "id": 1,
+            "id": "lionel-messi",
             "attributes": {
                 "name": "Lionel Messi",
                 "nationality": "Argentinian",

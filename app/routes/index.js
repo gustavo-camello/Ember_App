@@ -6,8 +6,9 @@ export default class IndexRoute extends Route {
         let {data} = await response.json();
 
         return data.map((model) => {
-            let { attributes } = model;
-            return {...attributes}
+            let { id, attributes } = model;
+            console.log(model)
+            return {id, ...attributes}
         })
         
     }

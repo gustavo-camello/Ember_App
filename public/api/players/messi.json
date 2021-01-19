@@ -1,7 +1,7 @@
 {
     "data": {
         "type": "players",
-            "id": 1,
+            "id": "lionel-messi",
             "attributes": {
                 "name": "Lionel Messi",
                 "nationality": "Argentinian",

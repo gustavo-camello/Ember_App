@@ -6,7 +6,11 @@
       />
     <div class="col-md-8 player">
       <div class="card-body">
-        <h5 class="card-title">{{@player.name}}</h5>
+        <h5 class="card-title">
+            <LinkTo @route="player" @model={{@player}}>
+                {{@player.name}}
+            </LinkTo>
+        </h5>
         <ul class="list-details">
             <li class="nationality p-1">Nationality: <span class="font-weight-bold" >{{@player.nationality}}</span></li>
             <li class="club p-1">Club: <span class="font-weight-bold">{{@player.club}}</span></li>
