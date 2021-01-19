@@ -6,21 +6,15 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | player', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
+  test('it renders information about a player', async (assert) => {
     await render(hbs`<Player />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Player>
-        template block text
-      </Player>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
-  });
+    assert.dom('ul').hasClass('list-details');
+    assert.dom('h5').hasText('Ronaldinho Gaucho');
+    assert.dom('.player-details .nationality').includesText('Nationality');
+    assert.dom('.player-details .club').includesText('Club');
+    assert.dom('.player-details .age').includesText('Age');
+    assert.dom('.player-details .position').includesText('Position');
+  })
+   
 });

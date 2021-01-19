@@ -1,3 +1,7 @@
 .list-details {
     list-style: none;
 }
+
+.image-container {
+    width: 100%;
+}
