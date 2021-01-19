@@ -5,8 +5,12 @@
     <LinkTo @route='about' class="btn btn-success">About Us</LinkTo>
 </Jumbotron>
 
+
 <div class="container">
-    <Player />
-    <Player />
-    <Player />
+    {{!-- <Player @player={{@model}}/>
+    <Player @player={{@model}}/>
+    <Player @player={{@model}}/> --}}
+    {{#each @model as |property|}}
+        <Player @player={{property}} />
+    {{/each}}
 </div>

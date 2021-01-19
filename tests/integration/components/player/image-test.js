@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, click } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | player/image', function(hooks) {
@@ -17,4 +17,5 @@ module('Integration | Component | player/image', function(hooks) {
     assert.dom('.image-container img').exists()
     .hasAttribute('alt', 'image of a player')
   });
+
 });
