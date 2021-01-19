@@ -1,3 +1,22 @@
-<div class="image-container">
-    <img ...attributes class="img-fluid">
-</div>
+
+{{#if this.isLarge}}
+    
+    <div class="col-md-12">
+        <button class="btn btn-default" {{on "click" this.toggleSize}}>
+            <div class="image-large">
+                <img ...attributes class="img-fluid">
+            </div>
+        </button>
+    </div>
+   
+{{else}}
+    
+    <div class="col-md-4">
+        <button class="btn btn-default" {{on "click" this.toggleSize}}>
+            <div class="image-container">
+                <img ...attributes class="img-fluid">
+            </div>
+        </button>
+    </div>
+    
+{{/if}}
