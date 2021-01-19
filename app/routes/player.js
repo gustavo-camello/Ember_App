@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 
+
 export default class IndexRoute extends Route {
     async model (params) {
         let response = await fetch(`/api/players/${params.player_id}.json`);
@@ -10,4 +11,6 @@ export default class IndexRoute extends Route {
         return { id, ...attributes};
         
     }
+
+
 }

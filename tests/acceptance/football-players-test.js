@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { click, visit, currentURL } from '@ember/test-helpers';
+import { click, find, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
 module('Acceptance | football players', function(hooks) {
@@ -64,6 +64,7 @@ module('Acceptance | football players', function(hooks) {
     await click('nav .home');
     assert.equal(currentURL(), '/');
   })
-
+  
+  
   
 });

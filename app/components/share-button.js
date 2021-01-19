@@ -1,8 +1,10 @@
+
 import Component from '@glimmer/component';
 
 const TWEET_INTENT = 'https://twitter.com/intent/tweet';
 
 export default class ShareButtonComponent extends Component {
+
     get currentURL() {
         return window.location.href;
     }
