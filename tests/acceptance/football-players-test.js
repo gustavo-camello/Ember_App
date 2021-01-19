@@ -9,6 +9,8 @@ module('Acceptance | football players', function(hooks) {
     await visit('/');
 
     assert.equal(currentURL(), '/');
+    assert.dom('nav').exists();
+    assert.dom('.navbar-brand').hasText('Football Players');
     assert.dom('h1').hasText('Welcome to Football Players');
 
     assert.dom('.jumbotron .btn').hasText('About Us');
@@ -21,6 +23,8 @@ module('Acceptance | football players', function(hooks) {
     await visit('/about');
 
     assert.equal(currentURL(), '/about');
+    assert.dom('nav').exists();
+    assert.dom('.navbar-brand').hasText('Football Players');
     assert.dom('h1').hasText('About Football Players');
 
     assert.dom('.jumbotron .btn').hasText('Contact Page');
@@ -33,12 +37,32 @@ module('Acceptance | football players', function(hooks) {
     await visit('/getting-in-touch');
 
     assert.equal(currentURL(), '/getting-in-touch');
+    assert.dom('nav').exists();
+    assert.dom('.navbar-brand').hasText('Football Players');
     assert.dom('h1').hasText('Contact Us');
 
     assert.dom('.jumbotron .btn').hasText('Home');
     await click('.jumbotron .btn');
 
     assert.equal(currentURL(), '/')
+  })
+
+  test('navigating using the navbar component', async (assert) => {
+    await visit('/');
+
+    assert.dom('nav').exists();
+    assert.dom('nav .home').hasText('Home');
+    assert.dom('nav .about').hasText('About');
+    assert.dom('nav .contact').hasText('Contact');
+
+    await click('nav .about');
+    assert.equal(currentURL(), '/about');
+
+    await click('nav .contact');
+    assert.equal(currentURL(), '/getting-in-touch');
+
+    await click('nav .home');
+    assert.equal(currentURL(), '/');
   })
 
   
